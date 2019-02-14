@@ -1,0 +1,274 @@
+\input{include/header.tex}
+\newcommand{\ms}{$\mu$-$\sigma$}
+\newcommand{\msd}{\ms-Diagramm}
+\newcommand{\mbd}{$\mu$-$\beta$-Diagramm}
+\title{BWL FR: Teil Finanzwirtschaft: Zusammenfassung}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\newpage
+	
+\section{Einführung}
+
+\begin{defi}{Investition}
+	Eine \textbf{Investition} ist eine \textbf{Entscheidung}, die zunächst eine \textbf{Auszahlung zur Folge} hat
+\end{defi}
+
+\begin{defi}{Finanzierung}
+	\textbf{Finanzierung} ist eine \textbf{Entscheidung}, die zunächst eine \textbf{Einzahlung zur Folge} hat
+\end{defi}
+\begin{ann}
+	Bei Finanzierung ist zwischen \textbf{Eigenkapital}, welches aus \textbf{Firmen- und Eigentümerbeständen} stammt und \textbf{Fremdkapital}, welches von \textbf{Dritten} stammt.
+\end{ann}
+
+\section{Capital Budgeting}
+\begin{defi}{Barwert (present value)}
+	Wert den zukünftige Zahlungen nun besitzen.\\
+	Bei Zinssatz $r$ und Zahlung im Höhe $x$ in $t$ Perioden gilt :\\
+	$$BW =  \frac{x}{(1+r)^t} $$
+\end{defi}
+\begin{defi}{Kaptialwert (Net present value)}
+	Der Kaptialwert ist bezieht im Vergleich zum Barwert die \textbf{Anafangszahlung} (AAZ) ein. 
+	$$ KW = -AAZ + BW$$
+\end{defi}
+\begin{defi}{Kapitalwertmethode}
+	Eine Investion ist profitabel $\boldmath{	\Leftrightarrow KW > 0}$. \\Die Kapitalwertmethode sagt, in diesem Fall soll die Investion getätigt werden
+\end{defi}
+\begin{why}{Kapitalwertmethode}
+	\begin{itemize}
+		\item Zahlungen als Grundlage
+		\item Mehrperiodizität
+		\item Berücksichtigung riskioadäquater Renditne
+	\end{itemize}
+\end{why}
+\begin{whynot}{Kapitalwertmethode}
+	\begin{itemize}
+		\item Vergleichbarkeit
+	\end{itemize}
+\end{whynot}
+\begin{defi}{Kaptialwertrate}
+	$$KWR = \frac{BW}{AAZ}$$
+	Sagt aus, wie das Verhältnis Einahmen $\leftrightarrow$ Ausgaben ist.
+	Investion profitabel, wenn KWR $> 1$
+\end{defi}
+\begin{why}{Kaptialwertrate}
+	\begin{itemize}
+		\item Vergleichbarkeit
+	\end{itemize}
+\end{why}
+\begin{defi}{Amortisationsrechnung}
+	Bestimme Zeit, bis AAZ erreicht
+	$$ t_a = \min_{t \in \mathbb{N}_0}{(\sum_{i=0}^{t}{BW_i} - AAZ > 0)} $$
+	Selektiere Projekte, die bis zum Planungshorizont armortisiert sind
+\end{defi}
+\begin{why}
+	\begin{itemize}
+		\item Zugeschnitten auf Zeithorizont
+	\end{itemize}
+\end{why}
+\begin{whynot}
+	\begin{itemize}
+		\item Gesamtrendite nicht brücksichtigt
+		\item Zahlungen nach $t_a$ nicht brücksichtigt
+	\end{itemize}
+\end{whynot}
+\begin{defi}{Interne Zinssatzmethode (IZSM)}
+	Löse:
+	$$ -AAZ + \sum_{i=0}^{t} \frac{c_i}{(1 + z)^i} = 0 $$
+	, wobei  t Anzahl der Perioden, $c_i$ Zahlung in Periode i, $z$ IZS.
+	Investiere, wenn $z > r$
+\end{defi}
+\begin{why}{IZSM}
+	\begin{itemize}
+		\item Vergleichbarkeit
+		\item Mehrperiodig
+	\end{itemize}
+\end{why}
+\begin{why}{IZSM}
+	\begin{itemize}
+		\item $n$ Vortzeichenwechsel $\Rightarrow$ $n$  Lösungen
+		\item Bei verschiedenen Größen nicht sauber vergleich bar $\Rightarrow$ Differenzprojekt
+	\end{itemize}
+\end{why}
+\section{Aktien}
+\subsection{IPO}
+Schritte eines IPOs:
+\begin{enumerate}
+	\item Auswahl Emissionsbank
+	\item Festsetzung der Transaktionscharakteristika
+	\item Due Diligence
+	\item Entwicklung Equity Story
+	\item Road Show / Bookbuilding
+	\item Preisfestsetzung
+	\item Zuteilung
+	\item Erster Handelstag
+	\item Kurspflege
+	\item Lockup Periode
+\end{enumerate}
+\begin{ann}{IPO Phänomene}
+	\item \textbf{Underpricing}: Bookbuildingprice < Handelskurs
+	\item \textbf{Zyklizität}: In guten Zeiten mehr IPOs (Business Cycle)
+	\item \textbf{Hohe Kosten}
+	\item \textbf{Performace langfristig meist mittelmäßig}
+\end{ann}
+\subsection{Dividende}
+Dividende sind Auszahlungen des EKs an Eigentümer.\\
+Bei Auszahlung einer Divdende um $x$ Geldeinheiten, fällt der Aktienkurs auch um $x$ Geldeinheiten
+\begin{ann}
+	Dividendenerhöhung signalisiert positive Erwartung und sorgt für Kurssteigerung. (Senkung analog)
+\end{ann}
+\begin{ann}{Dividend smoothing}
+	Dividenden werden konservativ angepasst, da Kürzung vermieden werden sollte
+\end{ann}
+\section{Portfeuilletheorie}
+
+\begin{formula}{Halteperio de Rendite}
+
+$$t_h =  \prod_{i=0}^{t}{(1-r_i)} - 1$$
+\end{formula}
+\begin{formula}{Geometrisch-durschnittliche Rendite}
+	$$ (1+r_g)^t = \prod_{i=0}^{t}{(1-r_i)}$$
+\end{formula}
+\begin{formula}{Arithmetisch-durschnittliche Rendite}
+	$$ r_a = \frac{1}{n} \cdot \sum_{i=0}^{t}{r_i}$$
+\end{formula}
+Folgende Formeln aus: \url{https://github.com/adrianleh/investments_revision/}
+\subsection{Markowitz}
+ \begin{defi}[Portfolio]
+	Ein Portfolio ist eine gewichtete Zusammenstellung von Wertpapieren. Dies ist als Vektor $w = (w_1, \dots, w_n)$ modellierbar, wobei $w_i$ das Gewicht des $i$-ten Wertpapier darstellt
+\end{defi}
+\begin{defi}[Leerverkaufsbeschränkung]
+	Sei $w = (w_1, \dots, w_n)$ PF, dann gilt unter LVK-Beschr: $w_i \geq 0 ~ ~ \forall i$
+\end{defi}
+\begin{defi}[\msd]
+	Ein \msd stellt die Verbindung zwischen Rendite und Risiko dar. Normalerweise wird dies durch eine Hyperbel dargestellt.
+\end{defi}
+\begin{defi}[Dominanz]
+	Seien WP1, WP2 Wertpapiere mit erw. Renditen $\mu_1$ und $\mu_2$ sowie Risiken $\sigma_1$ und $\sigma_2$\\
+	Dann gilt: \textbf{WP1 dominiert WP2} $\Longleftrightarrow ~ \mu_1 > \mu_2 \wedge \sigma_1 < \sigma_2$\\
+	\emph{Aus WP1 dominiert WP2 folgt \textbf{NICHT}, dass WP2 im Portfolio nicht sinnvoll ist ($\rightarrow$ Korrelation)}
+\end{defi}
+\begin{defi}[GVMP]
+	Das GVMP ist das Portfolio $w$, wo $\sigma$ minimal. Dies ist der Scheitel der Hyperbel in einem \msd 
+\end{defi}
+\begin{ann}
+	Das GVMP ist unter LVK-Beschr erreichbar $\Longleftrightarrow ~ \rho_{12} < min \{\sigma_1, \sigma_2\}$
+\end{ann}
+\begin{defi}[Effiziente PFs]
+	Ein PF $w$ ist effizient $\Longleftrightarrow ~ \nexists$ PF $\tilde{w}: \tilde{w}$ dominiert $w$
+\end{defi}
+\begin{defi}[Optimales Portfolio]
+	Punkt im \msd in dem die Indifferenzkurve des Investors ein effizientes PF erreicht
+\end{defi}
+\begin{defi}[Erreichbare Portfolios]
+	Die erreichbaren Portfolios befinden sich in der Fläche, welche durch die Hyperbel im \msd begrenzt wird.
+	Die Portfolios auf der Hyperbel heißen auch ``Randportfolios''.
+\end{defi}
+\begin{der}
+	Jedes Randportfolio ist LK von von 2 weiteren Randportfolios:\\
+	$\forall$ RandPF $p ~ \exists$ RandPF $g, h ~ \exists \lambda_g, \lambda_h \in \mathbb{R}: p = \lambda_g g + \lambda_h h$
+\end{der}
+\begin{formula}{Rendite Aktie}
+	$$ \tilde{r} = \frac{\tilde{S}(1)+D-\tilde{S}(0)}{\tilde{S}(0)}$$
+\end{formula}
+\begin{formula}[Erw. PF-Rendite]
+	$$\mu_w = \sum_{i=1}^{n}w_i\cdot\mu_i$$
+\end{formula}
+\begin{formula}[PF-Varianz] 
+	$$\sigma^{2}_w = \sum_{i=1}^{n}\sum_{j=1}^{n} w_i \cdot w_j \cdot Cov(\tilde{r}_i, \tilde{r}_j)$$
+	$$=  \sum_{i=1}^{n}\sum_{j=1}^{n} w_i \cdot w_j \cdot \rho_{ij} \cdot \sigma_i \cdot \sigma_j$$
+\end{formula}
+Sei $n = 2$
+\begin{formula}
+	$$w_1 = 1 - w_2$$
+\end{formula}
+\begin{formula}[Erw.-Wert]
+	$$\mu_w = w_1 \cdot \mu_1 + w_2 \cdot \mu_2$$
+\end{formula}
+\begin{formula}[Varianz]
+	$$\sigma^{2}_w = w^{2}_1 \cdot \sigma^{2}_1 + w^{2}_2 \cdot \sigma^{2}_2 + 2 \cdot w_1 \cdot w_2 \cdot \sigma_1 \cdot \sigma_2 \cdot \rho_{12}$$
+	$$\Rightarrow \sigma^{2}_w = w^{2}_1 \cdot \sigma^{2}_1 + (1-w_1)^{2} \cdot \sigma^{2}_2 + 2 \cdot w_1 \cdot (1-w_1) \cdot \sigma_1 \cdot \sigma_2 \cdot \rho_{ij}$$
+\end{formula}
+\subsection{CAPM}
+
+\textbf{Annahmen:}
+\begin{itemize}
+	\item Investoren optimieren auf $\mu$-$\sigma$ Basis
+	\item Investoren haben homogene Erwartungen
+	\item Der Anlagehorizont aller Investoren ist gleich
+	\item Kapitalmärkte sind vollkommen und friktionslos
+	\item Es besteht risikolose Anlage- und Aufnahmemöglichkeit zum selben Zinssatz $r$ und in bel. Höhe
+	\item Märkte bestehen aus handelbaren WPs mit festem Angebot
+\end{itemize}
+
+\textbf{Input:}
+\begin{itemize}
+	\item Erwartungswerte über zukünftige Kurse
+\end{itemize}
+
+\textbf{Output:}
+\begin{itemize}
+	\item Heutige Kurse passen sich bis zur Markträumung an
+\end{itemize}
+
+\textbf{Stärken CAPM:}
+\begin{itemize}
+	\item Relativ einfaches linears Gleichgewichtsmodeel
+	\item Plausible Annahmen
+	\item Robust gegenüber aufweichen der Annahmen:
+	\begin{itemize}
+		\item LVK Beschränkung ändert GGW Modell nicht
+		\item Risikoloses Instrument: Setze $\beta = 0$        
+	\end{itemize}
+\end{itemize}
+
+\textbf{Schwächen CAPM:}
+\begin{itemize}
+	\item Empirisch schwer zu testen (Rolls Kritik):
+	\begin{itemize}
+		\item Marktportfolio unmöglich zu erreichen
+		\item Lineare Risiko/Rendite Beziehung ist mathematische Tautologie
+	\end{itemize}
+\end{itemize}
+
+Die Idee ist, dass jeder Investor selbst sich Aktien und risikoloses Instrument. Dies erzeugt ein \textbf{Gleichgewicht}: Der Markt ist geräumt und alle Investoren sind befriedigt. \textbf{$\Longrightarrow$ Jeder Investor hat gleiches Portfolio (genannt: ``Marktportfolio'')}
+
+\begin{defi}{Kaptialmarktlinie - KML}
+	Alle effiziente PFs liegen auf der KML (Gerade).\\
+	Das einzige eff. reine Aktienportfolio ist das Marktportfolio
+\end{defi}
+
+\begin{defi}{Marktpreis des Risikos}
+	$$\frac{\mu_M - r}{\sigma_M}$$
+\end{defi}
+
+\begin{der}
+	Aktive Handelsstrategie NICHT sinnvoll, sondern nur das Nachbilden des Marktportfolios    
+\end{der}
+
+\begin{ann}[Risiko]
+	Risiken können in 2 Klassen unterteilt werden:\\
+	\begin{enumerate}
+		\item Systematisches Risiko (nicht div.bar): Risikobeitrag zum Gesamtrisiko $cov(\tilde{r}_j, \tilde{r}_M)$
+		\item Unsystematisches Risiko (div.bar): Unternehmensbez. Risiko $\sigma^{2}_{\epsilon_j}$
+	\end{enumerate}    
+\end{ann}
+
+\begin{defi}[$\beta_j$]
+	$$\beta_j \coloneqq \frac{cov(\tilde{r}_j, \tilde{r}_M)}{\sigma^{2}_M}$$
+\end{defi}
+
+Sei $w$ WP und $M$ Markt bestehend aus $w^M_i, i \in \{1, \dots, N\}$\\
+Es gilt: $\beta_i = \frac{cov(\tilde{r}_i, \tilde{r}_M)}{\sigma^{2}_M}$
+\begin{formula}[KML]
+	$$\mu_w = r + \frac{\mu_M - r}{\sigma_M} \cdot \sigma_w$$
+\end{formula}
+\begin{formula}[WPML]
+	$$\mu_j = r + (\mu_M - r) \cdot \beta_i$$
+\end{formula}
+\begin{formula}[Risiko Marktportfolio]
+	$$\sigma^{2}_M = \sum_{i=1}^{N}w_i^M \cdot cov(\tilde{r}_i, \tilde{r}_M)$$
+\end{formula}
+
+
+\end{document}
